@@ -15,9 +15,9 @@
  * Usage: require Ext.ux.app.Application in your main Application class.
  * No other configuration is necessary.
  *
- * Version 0.01
+ * Version 0.02
  *
- * Copyright (c) 2011-2012 Alexander Tokarev.
+ * Copyright (c) 2012 Alexander Tokarev.
  * Special thanks to IntelliSurvey Inc for sponsoring my work on this code.
  *  
  * This code is licensed under the terms of the Open Source LGPL 3.0 license.

@@ -37,9 +37,9 @@
  *        }
  *    });
  *
- * Version 0.01
+ * Version 0.02
  *
- * Copyright (c) 2011-2012 Alexander Tokarev.
+ * Copyright (c) 2012 Alexander Tokarev.
  * Special thanks to IntelliSurvey Inc for sponsoring my work on this code.
  *  
  * This code is licensed under the terms of the Open Source LGPL 3.0 license.
@@ -90,7 +90,9 @@ Ext.define('Ext.ux.app.Controller', {
         var me = this;
         
         if ( me.callParent(arguments) !== false ) {
-            me.eventbus.dispatch(eventName, me, Ext.Array.slice(arguments, 1));
+        
+            // EventBus.dispatch() will slice arguments itself
+            me.eventbus.dispatch(eventName, me, arguments);
         }
     },
 

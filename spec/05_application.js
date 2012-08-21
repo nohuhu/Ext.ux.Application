@@ -1,11 +1,8 @@
 /*
- * Ext.ux.app.Application test suite
- *
  * @title Ext.ux.app.Application
  *
- * These scripts should go first
- * @script /v=7.0/jslib/extjs4/ext-dev.js
- * @script /v=7.0/javascript/test/ext-common.js
+ * @script jslib/extjs4/ext-dev.js
+ * @script test/ext-common.js
  * 
  */
 

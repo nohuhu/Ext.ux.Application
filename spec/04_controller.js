@@ -1,11 +1,8 @@
 /*
- * Ext.ux.app.Controller test suite
- *
  * @title Ext.ux.app.Controller
  *
- * These scripts should go first
- * @script /v=7.0/jslib/extjs4/ext-dev.js
- * @script /v=7.0/javascript/test/ext-common.js
+ * @script jslib/extjs4/ext-dev.js
+ * @script test/ext-common.js
  * 
  */
 
@@ -72,7 +69,9 @@ describe("Augmented Ext.app.Controller w/o Application", function() {
                     },
                     
                     'controller': {
-                        foo: function() { ctrlEventFired = true; }
+                        foo: function() {
+                            ctrlEventFired = Ext.Array.from(arguments);
+                        }
                     }
                 });
             }
@@ -133,6 +132,12 @@ describe("Augmented Ext.app.Controller w/o Application", function() {
         ctrl.fireEvent('foo');
         
         expect(ctrlEventFired).toBeTruthy();
+    });
+    
+    it("should pass Controller event parameters correctly", function() {
+        ctrl.fireEvent('foo', 'bar', [ 'baz' ]);
+        
+        expect(ctrlEventFired).toEqual([ 'bar', [ 'baz' ] ]);
     });
     
     it("should return self on getController(self-id)", function() {
