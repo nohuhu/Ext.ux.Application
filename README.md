@@ -1,6 +1,9 @@
 Ext.ux.Application
 ==================
 
+UPDATE: An extended solution is now available as part of Ext JS 4.2;
+the code is still relevant for Ext JS 4.1 applications.
+
 This set of pseudo-classes (overrides) is aimed at solving two major
 problems with current Ext JS MVC implementation: tight coupling of
 Application and Controller classes, and absence of default coupling
